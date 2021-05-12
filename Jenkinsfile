@@ -21,8 +21,13 @@ pipeline {
         sh 'mvn package -DskipTests'
       }
     }
- 
- 
+
+    stage('Archive') {
+      steps {
+        archiveArtifacts '**/target/*.jar'
+      }
+    }
+
   }
   tools {
     maven 'maven'
