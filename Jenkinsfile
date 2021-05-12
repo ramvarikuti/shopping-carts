@@ -26,7 +26,7 @@ maven ‘maven’
         stage('package'){
             steps{
                 echo 'this is the package job'
-                sh ‘mvn package'
+                sh 'mvn package'
                 //sleep 7
             }
         }
